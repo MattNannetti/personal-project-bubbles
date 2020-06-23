@@ -1,104 +1,250 @@
 @font-face {
-    font-family: OpenSans;
-    src: url(fonts/OpenSans-Regular.ttf);
+  font-family: OpenSans;
+  src: url(fonts/OpenSans-Regular.ttf);
 }
 
-img {
 
-    margin: -50px;
+@font-face {
+
+  font-family: EnglandSignature;
+  src: url(fonts/England-Signature-Italic.otf);
+}
+
+
+img {
+  
+  /* margin: -50px; */
+}
+
+.links{
+
+  width: 70px;
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 50%;
 }
 
 .zoom {
-    transition: transform 0.01s;
-    width: 70px;
-    margin: 0 auto;
-  }
+  transition: transform 0.01s;
+  width: 70px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.zoom:hover {
+  transform: scale(1.4); 
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.54);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.54);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.54);
+}
+
+.circles{
   
-  .zoom:hover {
-    transform: scale(1.4); 
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
 
-  .circles{
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
-  }
 
-  body {
-    width: 80%;
-    margin: auto;
-    margin-top: 20px;
-    background-color: rgb(222, 252, 253);
-
+body {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: rgb(222, 252, 253);
+  background-image: url(pictures/background-gradient.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #maintitle {
-    font-family: OpenSans, sans-serif;
-    text-align: center;
-    border-top: black 4px solid;
-    border-bottom: black 4px solid;
+  font-family: EnglandSignature, OpenSans, sans-serif;
+  font-size: 80px;
+  text-align: center;
+  border-top: black 4px solid;
+  border-bottom: black 4px solid;
+  margin-top: 15px;
+  margin-bottom: 15px ;
 }
 
 
 
 a, li {
-    font-family: OpenSans, sans-serif;
-    text-decoration: none;
-    font-size: 20px;
+  font-family: OpenSans, sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  
 }
 /* unvisited link */
 a:link {
-    color: black;
-  }
-  
-  /* visited link */
-  a:visited {
-    color: black;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: rgb(141, 85, 129);
-  }
-  
-  /* selected link */
-  a:active {
-    color: black;
-  }
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(141, 85, 129);
+}
+
+/* selected link */
+a:active {
+  color: black;
+}
+
+
 
 ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
 }
 
 
 
 footer {
-    font-family: OpenSans, sans-serif;
-    margin: auto;
-    text-align: center;
+  font-family: OpenSans, sans-serif;
+  margin: auto;
+  text-align: center;
 }
 
-@media only screen and (min-width: 601px){
 
-    #smallscreen {
-        display: none;
-    }
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 75%;
+  padding-top: 50px;
+
+}
+
+#img1 {
+   width: 250px;
+   border-radius: 10px;
+   padding: 5px;
+
+}
+
+#img404 {
+
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*CONTACT PAGE styles */
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 50%; 
+  margin: auto;
+  padding: 12px;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #f5995b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #f88233;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-image: url(pictures/Bubbles-Background-Photos-Faded.jpg);
+  padding: 20px;
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-content: center;
+
+}
+
+
+
+
+/* MEDIA QUERIES  \o/   */
+
+@media only screen and (min-width: 769px){
+
+  #smallscreen {
+      display: none;
+  }
+
+  body {
+    background-image: url(pictures/background-gradient.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px){
+
+  body {
+    width: 50%;
+    background-image: url(pictures/background-gradient.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+  #smallscreen {
+      display: none;
+  }
 }
 
 @media only screen and (max-width: 600px){
 
-    nav, h1, footer, div, img {
+  body {
 
-        display: none;
-    }
-    #smallscreen {
-        @font-family: OpenSans, sans-serif;
+    background-image: url(pictures/background-gradient.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-    }
+  nav, h1, footer, div, img {
+
+      display: none;
+  }
+  #smallscreen {
+      @font-family: OpenSans, sans-serif;
+
+  }
 }
 
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
